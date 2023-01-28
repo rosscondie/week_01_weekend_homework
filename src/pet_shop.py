@@ -6,6 +6,10 @@ def get_total_cash(total):
 
 def add_or_remove_cash(total, num):
     total["admin"]["total_cash"] += num
-    
 
+    # total["admin"]["total_cash"] = total["admin"]["total_cash"] + num
+    # += adds the right operand to the left operand - assigns the result to the left operand
+    
+def add_or_remove_cash(total, num):
+    total["admin"]["total_cash"] += num
     
