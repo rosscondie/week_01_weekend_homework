@@ -1,57 +1,68 @@
+#TEST 1
 def get_pet_shop_name(petshop):
     return petshop["name"]
 
-def get_total_cash(total):
-    return total["admin"]["total_cash"]
+#TEST 2
+def get_total_cash(petshop):
+    return petshop["admin"]["total_cash"]
 
-def add_or_remove_cash(total, num):
-    total["admin"]["total_cash"] += num
+#TEST 3 & 4
+def add_or_remove_cash(petshop, num):
+    petshop["admin"]["total_cash"] += num
 
 # total["admin"]["total_cash"] = total["admin"]["total_cash"] + num
 # += adds the right operand to the left operand - assigns the result to the left operand
     
-def add_or_remove_cash(total, num):
-    total["admin"]["total_cash"] += num
+#TEST 5
+def get_pets_sold(petshop):
+    return petshop["admin"]["pets_sold"]
 
-def get_pets_sold(pets_sold):
-    return pets_sold["admin"]["pets_sold"]
-    
-def increase_pets_sold(pets, num):
-    pets["admin"]["pets_sold"] += num
+#TEST 6    
+def increase_pets_sold(petshop, num):
+    petshop["admin"]["pets_sold"] += num
 
-def get_stock_count(stock):
-    return len(stock["pets"])
+#TEST 7
+def get_stock_count(petshop):
+    return len(petshop["pets"])
 
-def get_pets_by_breed(pet_shop, breed):
+#TEST 8 & 9
+def get_pets_by_breed(petshop, breed):
     found_breed = []
-    for pet in pet_shop["pets"]:
+    for pet in petshop["pets"]:
         if pet["breed"] == breed:
             found_breed.append(pet)
     return found_breed
-    
-def find_pet_by_name(pet_shop, pet_name):
+
+#TEST 10 & 11   
+def find_pet_by_name(petshop, pet_name):
     found_name = None
-    for pet in pet_shop["pets"]:
+    for pet in petshop["pets"]:
         if pet["name"] == pet_name:
             found_name = pet
     return found_name
 
-def remove_pet_by_name(pet_shop, pet_name):
-    for pet in pet_shop["pets"]:
+#TEST 12
+def remove_pet_by_name(petshop, pet_name):
+    for pet in petshop["pets"]:
         if pet["name"] == pet_name:
-            pet_shop["pets"].remove(pet)
+            petshop["pets"].remove(pet)
 
-def add_pet_to_stock(pet_shop, new_pet):
-    pet_shop["pets"].append(new_pet)
+#TEST 13
+def add_pet_to_stock(petshop, new_pet):
+    petshop["pets"].append(new_pet)
 
+#TEST 14
 def get_customer_cash(customer):
     return customer["cash"]
 
+#TEST 15
 def remove_customer_cash(customer, customer_cash):
     customer["cash"] -= customer_cash
 
+#TEST 16
 def get_customer_pet_count(customer):
     return len(customer["pets"])
 
+#TEST 17
 def add_pet_to_customer(customer, new_pet):
     customer["pets"].append(new_pet)
